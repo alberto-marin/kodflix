@@ -16,28 +16,34 @@ function App() {
         <h1>Welcome to Kodflix</h1>
       </header>
       <main>
-        <div className="three-columns">
+        <section className="three-columns">
           <div className="column">
             <img src={reactImage} alt="react logo" className="image-logo" />
+            <h2 className="overlay">ReactJs</h2>
           </div>
           <div className="column">
             <img src={html5Image} alt="html5 logo" className="image-logo" />
+            <h2 className="overlay">HTML5</h2>
           </div>
           <div className="column">
             <img src={css3Image} alt="css3 logo" className="image-logo" />
+            <h2 className="overlay">CSS3</h2>
           </div>
-        </div>
-        <div className="three-columns">
+        </section>
+        <section className="three-columns">
           <div className="column">
             <img src={nodejsImage} alt="nodejs logo" className="image-logo" />
+            <h2 className="overlay">Node.js</h2>
           </div>
           <div className="column">
             <img src={databaseImage} alt="database logo" className="image-logo" />
+            <h2 className="overlay">MongoDB</h2>
           </div>
           <div className="column">
             <img src={herokuImage} alt="heroku logo" className="image-logo" />
+            <h2 className="overlay">Heroku</h2>
           </div>
-        </div>
+        </section>
       </main>
       <footer>
         <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
