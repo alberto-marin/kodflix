@@ -5,3 +5,11 @@
 .App-logo {
   height: 40vmin;
 }
+
+.three-columns {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
