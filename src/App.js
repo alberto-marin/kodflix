@@ -6,6 +6,7 @@ import herokuImage from './assets/img/heroku.svg';
 import html5Image from './assets/img/html5.svg';
 import nodejsImage from './assets/img/nodejs.svg';
 import reactImage from './assets/img/react.svg';
+import Column from './Column';
 import './App.css';
 
 function App() {
@@ -17,32 +18,14 @@ function App() {
       </header>
       <main>
         <section className="three-columns">
-          <div className="column">
-            <img src={reactImage} alt="react logo" className="image-logo" />
-            <h2 className="overlay">ReactJs</h2>
-          </div>
-          <div className="column">
-            <img src={html5Image} alt="html5 logo" className="image-logo" />
-            <h2 className="overlay">HTML5</h2>
-          </div>
-          <div className="column">
-            <img src={css3Image} alt="css3 logo" className="image-logo" />
-            <h2 className="overlay">CSS3</h2>
-          </div>
+          <Column name="ReactJs" logo={reactImage} />
+          <Column name="HTML5" logo={html5Image} />
+          <Column name="CSS3" logo={css3Image} />
         </section>
         <section className="three-columns">
-          <div className="column">
-            <img src={nodejsImage} alt="nodejs logo" className="image-logo" />
-            <h2 className="overlay">Node.js</h2>
-          </div>
-          <div className="column">
-            <img src={databaseImage} alt="database logo" className="image-logo" />
-            <h2 className="overlay">MongoDB</h2>
-          </div>
-          <div className="column">
-            <img src={herokuImage} alt="heroku logo" className="image-logo" />
-            <h2 className="overlay">Heroku</h2>
-          </div>
+          <Column name="Node.js" logo={nodejsImage} />
+          <Column name="MongoDB" logo={databaseImage} />
+          <Column name="Heroku" logo={herokuImage} />
         </section>
       </main>
       <footer>
