@@ -2,14 +2,20 @@
   text-align: center;
 }
 
-.App-logo {
+.App-logo,
+.image-logo {
   height: 40vmin;
 }
 
-.three-columns {
-  display: flex;
+.image-logo {
+  padding: 1em;
 }
 
-.column {
-  flex: 1;
+@media screen and (min-width: 768px) {
+  .three-columns {
+    display: flex;
+  }
+  .column {
+    flex: 1;
+  }
 }
