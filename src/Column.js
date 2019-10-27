@@ -1,11 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Column(props) {
     return (
-        <div className="column">
+        <Link to="/details" className="column">
             <img src={props.logo} alt={props.name + "logo"} className="image-logo" />
             <h2 className="overlay">{props.name}</h2>
-        </div>
+        </Link>
     )
 }
 
