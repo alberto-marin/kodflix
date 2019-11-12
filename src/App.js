@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import javascriptLogo from './assets/img/javascriptLogo.svg';
+import kodflixLogo from './assets/img/kodflix.png';
 import './App.css';
-import Technologies from './Technologies';
-import Details from './Details';
+import Movies from './components/Movies';
+import Details from './components/details/Details';
 import NotFound from './NotFound';
 
 function App() {
@@ -11,18 +11,18 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <img src={javascriptLogo} className="App-logo" alt="logo" />
+          <img src={kodflixLogo} className="App-logo" alt="logo" />
           <h1>Welcome to Kodflix</h1>
         </header>
         <main>
           <Switch>
-            <Route exact path="/" component={Technologies} />
+            <Route exact path="/" component={Movies} />
             <Route exact path="/not-found" component={NotFound} />
-            <Route exact path="/:technologyId" component={Details} />
+            <Route exact path="/:movieId" component={Details} />
           </Switch>
         </main>
         <footer>
-          <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          <p>Alberto Marin 2019</p>
         </footer>
       </div>
     </Router>
