@@ -62,7 +62,7 @@ a {
 .image-logo:hover ~ .overlay,
 .overlay:hover {
   opacity: 1;
-  bottom: 0;
+  bottom: -1em;
 }
 
 @media screen and (min-width: 600px) {
