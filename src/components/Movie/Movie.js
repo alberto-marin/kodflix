@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Movie({ id, logo, name }) {
     return (
         <Link to={"/" + id} className="column">
-            <img src={logo} alt={name + "logo"} className="image-logo" />
+            <img src={logo} alt={name + "logo"} className="movie-poster" />
             <h2 className="overlay">{name}</h2>
         </Link>
     )

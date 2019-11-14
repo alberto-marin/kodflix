@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import kodflixLogo from './assets/img/kodflix.png';
 import './App.css';
-import Movies from './components/Movies';
-import Details from './components/details/Details';
-import NotFound from './NotFound';
+import Movies from './components/Movies/Movies';
+import Details from './components/Details/Details';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (

@@ -13,14 +13,14 @@ a {
   height: 10vmin;
 }
 
-.image-logo {
+.movie-poster {
   padding: 1em;
   width: calc(100% - 2em);
   height: auto;
   object-fit: fill;
 }
 @media screen and (min-width: 600px) {
-  .image-logo {
+  .movie-poster {
     height: 50vh;
     object-fit: cover;
     object-position: center;
@@ -28,7 +28,7 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .image-logo {
+  .movie-poster {
     height: 100vh;
   }
 }
@@ -59,7 +59,7 @@ a {
   padding: 2em 0;
 }
 
-.image-logo:hover ~ .overlay,
+.movie-poster:hover ~ .overlay,
 .overlay:hover {
   opacity: 1;
   bottom: -1em;

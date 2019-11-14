@@ -1,10 +1,10 @@
 import React from 'react';
-import Movie from './Movie';
-import getMovies from '../data-source/Movies-get';
+import Movie from '../Movie/Movie';
+import getMovies from '../../data-source/Movies-get';
 
 function Movies() {
   return (
-    <div className="technologies">
+    <div className="movies">
       <section className="three-columns">
         {
           getMovies().map(movie => (
