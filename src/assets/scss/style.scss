@@ -1,0 +1,21 @@
+body {
+  background-color: #111;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+/*
+** COMPONENTS
+*/
+@import "../../components/Movies/movies";
+@import "../../components/Movie/movie";
+@import "../../components/Details/details";

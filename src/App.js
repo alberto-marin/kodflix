@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import kodflixLogo from './assets/img/kodflix.png';
-import './App.css';
+import './assets/scss/style.scss';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Movies from './components/Movies/Movies';
 import Details from './components/Details/Details';
 import NotFound from './components/NotFound/NotFound';
@@ -10,10 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <img src={kodflixLogo} className="App-logo" alt="logo" />
-          <h1>Welcome to Kodflix</h1>
-        </header>
+        <Header />
         <main>
           <Switch>
             <Route exact path="/" component={Movies} />
@@ -21,11 +19,9 @@ function App() {
             <Route exact path="/:movieId" component={Details} />
           </Switch>
         </main>
-        <footer>
-          <p>Alberto Marin 2019</p>
-        </footer>
+        <Footer />
       </div>
-    </Router>
+    </Router >
   );
 }
 

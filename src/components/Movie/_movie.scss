@@ -1,0 +1,48 @@
+.column {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  @media screen and (min-width: 600px) {
+    flex: 1;
+    min-width: calc(100% / 3);
+  }
+  @media screen and (min-width: 1024px) {
+    height: 100vh;
+  }
+
+  .movie-poster {
+    padding: 1em;
+    width: calc(100% - 2em);
+    height: auto;
+    object-fit: fill;
+    @media screen and (min-width: 600px) {
+      height: 50vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+      height: 100vh;
+    }
+  }
+
+  .overlay {
+    opacity: 0;
+    margin-top: 0;
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 32px;
+    padding: 2em 0;
+    &:hover ~ .overlay,
+    &:hover {
+      opacity: 1;
+      bottom: -1em;
+    }
+  }
+}
