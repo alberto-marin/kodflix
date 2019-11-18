@@ -19,7 +19,7 @@ export default class Details extends Component {
     );
     this.setState({ movie });
 
-    axios.get(`https://baconipsum.com/api/?type=meat-and-filler&paras=1&format=text`)
+    axios.get(`https://baconipsum.com/api/?type=meat-and-filler&paras=5&format=html`)
       .then(res => {
         const synopsis = res.data;
         this.setState({ synopsis });
@@ -35,9 +35,9 @@ export default class Details extends Component {
         <section className="details">
           <h2>{this.state.movie.name}</h2>
           <img src={this.state.movie.logo} alt={this.state.movie.name} />
-          <p>{this.state.synopsis}</p>
+          <div dangerouslySetInnerHTML={{ __html: this.state.synopsis }}></div>
           <Link to="/">Back to home</Link>
-        </section>
+        </section >
       )
     }
 
