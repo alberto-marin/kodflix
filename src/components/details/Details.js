@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import getMovies from '../../data-source/Movies-get';
 
-export default class Details extends Component {
+class Details extends Component {
   constructor() {
     super();
     this.state = {
@@ -43,3 +43,5 @@ export default class Details extends Component {
 
   }
 }
+
+export default Details;
