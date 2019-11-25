@@ -13,7 +13,7 @@ a {
   height: 80px;
 }
 
-img {
+img:not(.App-logo) {
   width: 100%;
   max-width: 100%;
   height: auto;
