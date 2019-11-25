@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
-import getMovies from '../../data-source/Movies-get';
+import getMovies from '../../data-source/movies-get';
 
 class Details extends Component {
   constructor() {

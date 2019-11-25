@@ -1,6 +1,6 @@
 import React from 'react';
-import Movie from '../Movie/Movie';
-import getMovies from '../../data-source/Movies-get';
+import Movie from '../movie/movie';
+import getMovies from '../../data-source/movies-get';
 
 function Movies() {
   return (
