@@ -1,47 +1,44 @@
-import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, Redirect, useParams } from 'react-router-dom';
 import axios from 'axios';
 import getMovies from '../../data-source/movies-get';
 
-class Details extends Component {
-  constructor() {
-    super();
-    this.state = {
-      movie: {},
-      synopsis: []
-    };
-  }
+function Details() {
 
-  componentDidMount() {
-    let movieId = this.props.match.params.movieId;
+  const [movie, setMovie] = useState({});
+  const [synopsis, setSynopsis] = useState([]);
+  let { movieId } = useParams();
+
+  useEffect(() => {
+
     let movie = getMovies().find(
       (movie) => movie.id === movieId
     );
-    this.setState({ movie });
+    setMovie(movie);
 
     axios.get(`https://baconipsum.com/api/?type=meat-and-filler&paras=5&format=html`)
       .then(res => {
         const synopsis = res.data;
-        this.setState({ synopsis });
+        setSynopsis(synopsis);
       });
+
+  }, [movieId]);
+
+
+  //let movie = this.state.movie;
+  if (movie === undefined) {
+    return <Redirect to="/not-found" />
+  } else {
+    return (
+      <section className="details">
+        <h2>{movie.name}</h2>
+        <img src={movie.logo} alt={movie.name} />
+        <div dangerouslySetInnerHTML={{ __html: synopsis }}></div>
+        <Link to="/">Back to home</Link>
+      </section >
+    )
   }
 
-  render() {
-    //let movie = this.state.movie;
-    if (this.state.movie === undefined) {
-      return <Redirect to="/not-found" />
-    } else {
-      return (
-        <section className="details">
-          <h2>{this.state.movie.name}</h2>
-          <img src={this.state.movie.logo} alt={this.state.movie.name} />
-          <div dangerouslySetInnerHTML={{ __html: this.state.synopsis }}></div>
-          <Link to="/">Back to home</Link>
-        </section >
-      )
-    }
-
-  }
 }
 
 export default Details;
